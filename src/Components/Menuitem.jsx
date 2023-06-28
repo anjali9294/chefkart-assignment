@@ -60,7 +60,7 @@ const Menuitem = () => {
         {ingredients && ingredients.vegetables ? (
           <div>
             {ingredients.vegetables.map((item, index) => (
-              <div key={index} className="d-flex justify-content-between">
+              <div key={index} className="d-flex justify-content-between me-3">
                 <p className="">{item.name}</p>
                 <p>{item.quantity}</p>
               </div>
@@ -75,7 +75,7 @@ const Menuitem = () => {
         {ingredients && ingredients.spices ? (
           <div>
             {ingredients.spices.map((item, index) => (
-              <div key={index} className="d-flex justify-content-between">
+              <div key={index} className="d-flex justify-content-between me-3 ">
                 <p className="">{item.name}</p>
                 <p>{item.quantity}</p>
               </div>

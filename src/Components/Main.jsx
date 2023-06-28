@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Dish from "./7d58dfe2-42b8-40a4-9aa9-28fc7c323697.png";
+import { useNavigate } from "react-router-dom";
 const Main = () => {
   // State to hold the restaurant data
   const [restaurants, setRestaurants] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     fetch(
       "https://8b648f3c-b624-4ceb-9e7b-8028b7df0ad0.mock.pstmn.io/dishes/v1/"
@@ -35,7 +37,10 @@ const Main = () => {
               <div className="vertical"></div>
               <div className="Ingrigient ms-2 mt-2">
                 <p className="m-0  Ingrigient-name">Ingredients</p>
-                <p className="m-0 view-list">
+                <p
+                  className="m-0 view-list"
+                  onClick={() => navigate("/Ingredients")}
+                >
                   View List
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
